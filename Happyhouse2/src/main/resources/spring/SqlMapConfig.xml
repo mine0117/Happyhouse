@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<!-- Type Alias 등록 하세요  -->
+		<typeAlias type="com.ssafy.happyhouse.model.dto.MemberDto"	alias="MemberDto"/>
+		<typeAlias type="com.ssafy.happyhouse.model.dto.HouseDeal"	alias="houseDeal"/>
+		
+	</typeAliases>
+	<mappers>
+		
+	</mappers>
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

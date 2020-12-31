@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="userInfo">
+
+   <insert id="join" parameterType="MemberDto">
+      insert into userinfo(unum,userid,
+      userpwd, username,
+      address, phone)
+      values(#{unum},#{userid},#{userpwd},#{username},#{address},#{phone})
+   </insert>
+
+   <select id="login" parameterType="MemberDto"
+      resultType="MemberDto">
+      select *
+      from userinfo
+      where
+      userid =
+      #{userid} and userpwd = #{userpwd}
+   </select>
+
+   <select id="search" parameterType="String"
+      resultType="MemberDto">
+      select userpwd
+      from userinfo
+      where userid = #{userid}
+   </select>
+
+   <update id="update" parameterType="MemberDto">
+      update userinfo
+      set userpwd = #{userpwd}, username =
+      #{username}, address = #{address}, phone = #{phone}
+      where unum =
+      #{unum}
+   </update>
+
+   <delete id="delete" parameterType="MemberDto">
+      delete from userinfo
+      where userid = #{userid}
+   </delete>
+
+   <select id="list" resultType="MemberDto">
+      select *
+      from userinfo
+   </select>
+</mapper>
